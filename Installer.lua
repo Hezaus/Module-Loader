@@ -354,30 +354,3 @@ do
 		return "https://raw.githubusercontent.com/" .. stripped
 	end
 end
-
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local ServerScriptService = game:GetService("ServerScriptService")
-
--- Mount loader
-do
-	local url = "https://github.com/Roblox/roact/tree/master/src"
-	local entry = EntryUtils.create("Folder", "Roact", "")
-	ParseUtils.fillFoldersAsync(url, entry)
-	ParseUtils.fillScriptSourcesAsync(ParseUtils.githubContentFromUrl(url), entry)
-	EntryUtils.mount(ReplicatedStorage, entry)
-end
-
---[[ Mount libraries
-do
-	local url = "https://github.com/Quenty/NevermoreEngine/tree/version2/Modules"
-	local entry = EntryUtils.create("Folder", "Core", "")
-	local fullEntry = EntryUtils.create("Folder", "Nevermore", "", { entry })
-
-	ParseUtils.fillFoldersAsync(url, entry)
-	ParseUtils.fillScriptSourcesAsync(ParseUtils.githubContentFromUrl(url), entry)
-	EntryUtils.mount(ServerScriptService, fullEntry)
-end
-]]
-print("Done installing")
-
---Testing script by nevermore
