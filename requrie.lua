@@ -13,4 +13,6 @@ function b:value(value:number)
     return value
 end
 
+print("B")
+
 return b
