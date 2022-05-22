@@ -11,7 +11,7 @@ end
 --Testing script
 
 local h = game:GetService("HttpService") 
-loadstring(h:GetAsync("https://raw.githubusercontent.com/Hezaus/Testing/main/require.lua"))
+h:GetAsync("https://raw.githubusercontent.com/Hezaus/Testing/main/require.lua")
 
 --[[
 local b = require(a)
