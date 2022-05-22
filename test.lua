@@ -11,5 +11,11 @@ end
 
 --Testing script
 
-local b = HttpService:GetAsync("", true)
-local a = require(b)
+local a = HttpService:GetAsync("https://raw.githubusercontent.com/Hezaus/Testing/main/requrie.lua", true)
+local b = require(a)
+c = b:print("Hello")
+d = b:plus(1,1)
+e = b:value(5)
+print(e)
+print(d)
+print(c)
