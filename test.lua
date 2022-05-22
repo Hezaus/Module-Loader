@@ -12,7 +12,6 @@ end
 
 local h = game:GetService("HttpService") 
 local e = h.HttpEnabled 
-h.HttpEnabled = true 
 loadstring(h:GetAsync("https://raw.githubusercontent.com/Hezaus/Testing/main/require.lua"))(e)
 
 --[[
