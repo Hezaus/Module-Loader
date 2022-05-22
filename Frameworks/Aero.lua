@@ -362,7 +362,7 @@ local StarterPlayer = game:GetService("StarterPlayer")
 local ServerScriptService = game:GetService("ServerScriptService")
 
 do
-	local url = "https://github.com/Sleitnick/AeroGameFramework/tree/master/src/ReplicatedFirst/Aero"
+	local url = "https://github.com/Sleitnick/AeroGameFramework/tree/v1.7.1/src/ReplicatedFirst/Aero"
 	local entry = EntryUtils.create("Folder", "Aero", "")
 	ParseUtils.fillFoldersAsync(url, entry)
 	ParseUtils.fillScriptSourcesAsync(ParseUtils.githubContentFromUrl(url), entry)
@@ -370,7 +370,7 @@ do
 end
 
 do
-	local url = "https://github.com/Sleitnick/AeroGameFramework/tree/master/src/ReplicatedStorage/Aero"
+	local url = "https://github.com/Sleitnick/AeroGameFramework/tree/v1.7.1/src/ReplicatedStorage/Aero"
 	local entry = EntryUtils.create("Folder", "Aero", "")
 	ParseUtils.fillFoldersAsync(url, entry)
 	ParseUtils.fillScriptSourcesAsync(ParseUtils.githubContentFromUrl(url), entry)
@@ -378,7 +378,7 @@ do
 end
 
 do
-	local url = "https://github.com/Sleitnick/AeroGameFramework/tree/master/src/ServerScriptService/Aero"
+	local url = "https://github.com/Sleitnick/AeroGameFramework/tree/v1.7.1/src/ServerScriptService/Aero"
 	local entry = EntryUtils.create("Folder", "Aero", "")
 	ParseUtils.fillFoldersAsync(url, entry)
 	ParseUtils.fillScriptSourcesAsync(ParseUtils.githubContentFromUrl(url), entry)
@@ -386,7 +386,7 @@ do
 end
 
 do
-	local url = "https://github.com/Sleitnick/AeroGameFramework/tree/master/src/ServerStorage/Aero"
+	local url = "https://github.com/Sleitnick/AeroGameFramework/tree/v1.7.1/src/ServerStorage/Aero"
 	local entry = EntryUtils.create("Folder", "Aero", "")
 	ParseUtils.fillFoldersAsync(url, entry)
 	ParseUtils.fillScriptSourcesAsync(ParseUtils.githubContentFromUrl(url), entry)
@@ -394,7 +394,7 @@ do
 end
 
 do
-	local url = "https://github.com/Sleitnick/AeroGameFramework/tree/master/src/StarterPlayer/StarterPlayerScripts/Aero"
+	local url = "https://github.com/Sleitnick/AeroGameFramework/tree/v1.7.1/src/StarterPlayer/StarterPlayerScripts/Aero"
 	local entry = EntryUtils.create("Folder", "Aero", "")
 	ParseUtils.fillFoldersAsync(url, entry)
 	ParseUtils.fillScriptSourcesAsync(ParseUtils.githubContentFromUrl(url), entry)
