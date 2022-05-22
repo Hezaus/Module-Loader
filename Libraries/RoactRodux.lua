@@ -367,4 +367,4 @@ do
 	EntryUtils.mount(ReplicatedStorage, entry)
 end
 
-print("Done installing Roact Rodux")
+print("Done installing Roact-Rodux")

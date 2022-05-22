@@ -367,6 +367,4 @@ do
 	EntryUtils.mount(ReplicatedStorage, entry)
 end
 
-print("Done installing")
-
---Testing script by nevermore
+print("Done installing RbxNet")
