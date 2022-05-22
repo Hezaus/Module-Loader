@@ -28,4 +28,3 @@ local HttpService = game:GetService("HttpService")
 
 local a = HttpService:GetAsync("https://raw.githubusercontent.com/Hezaus/Testing/main/requrie.lua")
 local b = HttpService:JSONDecode(a)
-print(b)
