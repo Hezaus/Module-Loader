@@ -360,13 +360,13 @@ local ServerScriptService = game:GetService("ServerScriptService")
 
 -- Mount loader
 do
-	local url = "https://github.com/Roblox/roact/tree/master/src"
-	local entry = EntryUtils.create("Folder", "Roact", "")
+	local url = "https://github.com/Elttob/Fusion/tree/main/src"
+	local entry = EntryUtils.create("Folder", "Fusion", "")
 	ParseUtils.fillFoldersAsync(url, entry)
 	ParseUtils.fillScriptSourcesAsync(ParseUtils.githubContentFromUrl(url), entry)
 	EntryUtils.mount(ReplicatedStorage, entry)
 end
 
-print("Done installing")
+print("Done installing Fusion")
 
 --Testing script by nevermore
