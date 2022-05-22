@@ -360,11 +360,12 @@ local ServerScriptService = game:GetService("ServerScriptService")
 
 -- Mount loader
 do
-	local url = "https://github.com/Roblox/roact/tree/master/src"
-	local entry = EntryUtils.create("Folder", "Roact", "")
+	local url = "https://github.com/boatbomber/WindShake/tree/main/src"
+	local entry = EntryUtils.create("Folder", "WindShake", "")
 	ParseUtils.fillFoldersAsync(url, entry)
 	ParseUtils.fillScriptSourcesAsync(ParseUtils.githubContentFromUrl(url), entry)
 	EntryUtils.mount(ReplicatedStorage, entry)
+	return entry
 end
 
-print("Done installing Rex")
+print("Done installing Windshake")

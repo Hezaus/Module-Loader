@@ -360,11 +360,11 @@ local ServerScriptService = game:GetService("ServerScriptService")
 
 -- Mount loader
 do
-	local url = "https://github.com/Roblox/roact/tree/master/src"
-	local entry = EntryUtils.create("Folder", "Roact", "")
+	local url = "https://github.com/Swordphin/raycastHitboxRbxl/tree/master/lib"
+	local entry = EntryUtils.create("Folder", "RayCast", "")
 	ParseUtils.fillFoldersAsync(url, entry)
 	ParseUtils.fillScriptSourcesAsync(ParseUtils.githubContentFromUrl(url), entry)
 	EntryUtils.mount(ReplicatedStorage, entry)
 end
 
-print("Done installing FastCastRedux")
+print("Done installing RayCastHitbox")
