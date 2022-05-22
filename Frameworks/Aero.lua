@@ -356,17 +356,51 @@ do
 end
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local ReplicatedFirst = game:GetService("ReplicatedFirst")
+local ServerStorage = game:GetService("ServerStorage")
+local StarterPlayer = game:GetService("StarterPlayer")
 local ServerScriptService = game:GetService("ServerScriptService")
 
--- Mount loader
 do
-	local url = "https://github.com/Sleitnick/AeroGameFramework/tree/master/src"
+	local url = "https://github.com/Sleitnick/AeroGameFramework/tree/master/src/ReplicatedFirst/Aero"
+	local entry = EntryUtils.create("Folder", "Aero", "")
+	ParseUtils.fillFoldersAsync(url, entry)
+	ParseUtils.fillScriptSourcesAsync(ParseUtils.githubContentFromUrl(url), entry)
+	EntryUtils.mount(ReplicatedFirst, entry)
+end
+
+do
+	local url = "https://github.com/Sleitnick/AeroGameFramework/tree/master/src/ReplicatedStorage/Aero"
 	local entry = EntryUtils.create("Folder", "Aero", "")
 	ParseUtils.fillFoldersAsync(url, entry)
 	ParseUtils.fillScriptSourcesAsync(ParseUtils.githubContentFromUrl(url), entry)
 	EntryUtils.mount(ReplicatedStorage, entry)
 end
 
-print("Done installing")
+do
+	local url = "https://github.com/Sleitnick/AeroGameFramework/tree/master/src/ServerScriptService/Aero"
+	local entry = EntryUtils.create("Folder", "Aero", "")
+	ParseUtils.fillFoldersAsync(url, entry)
+	ParseUtils.fillScriptSourcesAsync(ParseUtils.githubContentFromUrl(url), entry)
+	EntryUtils.mount(ServerScriptService, entry)
+end
+
+do
+	local url = "https://github.com/Sleitnick/AeroGameFramework/tree/master/src/ServerStorage/Aero"
+	local entry = EntryUtils.create("Folder", "Aero", "")
+	ParseUtils.fillFoldersAsync(url, entry)
+	ParseUtils.fillScriptSourcesAsync(ParseUtils.githubContentFromUrl(url), entry)
+	EntryUtils.mount(ServerStorage, entry)
+end
+
+do
+	local url = "https://github.com/Sleitnick/AeroGameFramework/tree/master/src/StarterPlayer/StarterPlayerScripts/Aero"
+	local entry = EntryUtils.create("Folder", "Aero", "")
+	ParseUtils.fillFoldersAsync(url, entry)
+	ParseUtils.fillScriptSourcesAsync(ParseUtils.githubContentFromUrl(url), entry)
+	EntryUtils.mount(StarterPlayer.StarterPlayerScripts, entry)
+end
+
+print("Done installing Aero")
 
 --Testing script by nevermore
