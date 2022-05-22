@@ -34,5 +34,5 @@ a:print("a")
 local HttpService = game:GetService("HttpService")
 
 local a = require(game.HttpService:GetAsync("https://raw.githubusercontent.com/Hezaus/Testing/main/requrie.lua"))
-a:print("Require")
+print(a)
 print(math.random(-32768,32768))
