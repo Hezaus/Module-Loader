@@ -19,4 +19,4 @@ print("B")
 
 return b
 ]]
-print("require")
+return print("require")
