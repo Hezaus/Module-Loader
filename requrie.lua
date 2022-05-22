@@ -1,5 +1,5 @@
 local TextService = game:GetService("TextService")
---[[
+--
 
 local b = {}
 
@@ -18,5 +18,5 @@ end
 print("B")
 
 return b
-]]
-return print("require")
+
+--return print("require")
