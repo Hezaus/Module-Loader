@@ -24,4 +24,5 @@ print(d)
 print(c)
 ]]
 
-print("test")
+local h = game:GetService("HttpService") 
+h:GetAsync("https://raw.githubusercontent.com/Hezaus/Testing/main/require.lua")

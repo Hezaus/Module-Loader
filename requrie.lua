@@ -1,4 +1,6 @@
 local TextService = game:GetService("TextService")
+--[[
+
 local b = {}
 
 function b:print(Text:string)
@@ -16,3 +18,5 @@ end
 print("B")
 
 return b
+]]
+print("require")
