@@ -32,5 +32,5 @@ local b = HttpService:JSONDecode(a)
 a:print("a")
 ]]
 local HttpService = game:GetService("HttpService")
-local data  = HttpService:GetAsync("https://www.reddit.com/r/memes/.json")
-print(HttpService:JSONDecode(data))
+local data  = game.HttpService:GetAsync("https://www.reddit.com/r/memes/.json")
+print(game.HttpService:JSONDecode(data).data.children[1].data.title)
