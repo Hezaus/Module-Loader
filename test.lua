@@ -24,14 +24,8 @@ print(d)
 print(c)
 ]]
 
-local url = "https://api.coindesk.com/v1/bpi/currentprice.json" -- free api that has bitcoin prices
+local HttpService = game:GetService("HttpService")
 
-local web = game:GetService("HttpService")
-
-local result = web:GetAsync(url) -- grabs the data from the url
-
-print(result) -- would be JSON which is unusable for lua
-
-local LUA_RESULT = web:JSONDecode(result) -- turns JSON into a dictionary
-
-print(LUA_RESULT)
+local a = HttpService:GetAsync("https://api.coindesk.com/v1/bpi/currentprice.json")
+local b = HttpService:JSONDecode(a)
+print(b)
