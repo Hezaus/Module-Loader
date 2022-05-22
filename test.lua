@@ -9,9 +9,10 @@ end
 ]]
 
 --Testing script
-
+--[[
 local h = game:GetService("HttpService") 
 h:GetAsync("https://raw.githubusercontent.com/Hezaus/Testing/main/require.lua")
+]]
 
 --[[
 local b = require(a)
@@ -22,3 +23,5 @@ print(e)
 print(d)
 print(c)
 ]]
+
+print("test")
