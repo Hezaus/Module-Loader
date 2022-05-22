@@ -24,17 +24,24 @@ print(d)
 print(c)
 ]]
 
-local HttpService = game:GetService("HttpService")
- 
-local URL = "https://raw.githubusercontent.com/Hezaus/Testing/main/require.lua"
- 
--- Make the request to our endpoint URL
-local response = HttpService:GetAsync(URL)
- 
--- Parse the JSON response
-local data = HttpService:JSONDecode(response)
+local http = game:GetService("HttpService")
+local url = "https://catalog.roproxy.com/v1/search/items/details?Category=11&Subcategory=9"
 
--- Information in the data table is dependent on the response JSON
-if data.message == "success" then
-	print("data")
-end
+local finished = false
+local RunTimes = 0
+local MAX_RUN = 2
+	
+repeat
+	local response = http:GetAsync(url)
+	local data = http:JSONDecode(response)
+	local nextPageCursor = data.nextPageCursor
+	local realdata = data["data"]
+    print(realdata)
+	if nextPageCursor then
+		url = "https://catalog.roproxy.com/v1/search/items/details?Category=11&Subcategory=9&Cursor="..nextPageCursor
+		RunTimes += 1
+	else
+		finished = true
+		print("true")
+	end
+until finished == true or RunTimes == MAX_RUN
