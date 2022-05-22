@@ -360,13 +360,13 @@ local ServerScriptService = game:GetService("ServerScriptService")
 
 -- Mount loader
 do
-	local url = "https://github.com/boatbomber/BoatTween/tree/master/src/BoatTween"
-	local entry = EntryUtils.create("Folder", "BoatTween", "")
+	local url = "https://github.com/Roblox/roact/tree/master/src"
+	local entry = EntryUtils.create("Folder", "Roact", "")
 	ParseUtils.fillFoldersAsync(url, entry)
 	ParseUtils.fillScriptSourcesAsync(ParseUtils.githubContentFromUrl(url), entry)
 	EntryUtils.mount(ReplicatedStorage, entry)
 end
 
-print("Done installing BoatTween")
+print("Done installing")
 
 --Testing script by nevermore

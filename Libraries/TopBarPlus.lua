@@ -360,13 +360,13 @@ local ServerScriptService = game:GetService("ServerScriptService")
 
 -- Mount loader
 do
-	local url = "https://github.com/Roblox/roact/tree/master/src"
-	local entry = EntryUtils.create("Folder", "Roact", "")
+	local url = "https://github.com/1ForeverHD/TopbarPlus/tree/main/src/Icon"
+	local entry = EntryUtils.create("Folder", "TopBar", "")
 	ParseUtils.fillFoldersAsync(url, entry)
 	ParseUtils.fillScriptSourcesAsync(ParseUtils.githubContentFromUrl(url), entry)
 	EntryUtils.mount(ReplicatedStorage, entry)
 end
 
-print("Done installing")
+print("Done installing TopBarPlus")
 
 --Testing script by nevermore
