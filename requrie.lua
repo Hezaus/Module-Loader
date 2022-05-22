@@ -12,8 +12,6 @@ function b:value(value:number)
     return value
 end
 
-print("B")
-
-return b
+return b,print("B")
 
 --return print("require")
