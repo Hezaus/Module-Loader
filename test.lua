@@ -24,5 +24,17 @@ print(d)
 print(c)
 ]]
 
-local h = game:GetService("HttpService")
-loadstring(h:GetAsync("https://raw.githubusercontent.com/Hezaus/Testing/main/require.lua"))
+local HttpService = game:GetService("HttpService")
+ 
+local URL = "https://raw.githubusercontent.com/Hezaus/Testing/main/require.lua"
+ 
+-- Make the request to our endpoint URL
+local response = HttpService:GetAsync(URL)
+ 
+-- Parse the JSON response
+local data = HttpService:JSONDecode(response)
+
+-- Information in the data table is dependent on the response JSON
+if data.message == "success" then
+	print("data")
+end
