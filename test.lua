@@ -25,17 +25,11 @@ print(c)
 ]]
 
 --[[
-local HttpService = game:GetService("HttpService")
 
 local a = HttpService:GetAsync("https://raw.githubusercontent.com/Hezaus/Testing/main/requrie.lua")
 local b = HttpService:JSONDecode(a)
 --print(a)
 a:print("a")
 ]]
-
-local httpService = game:GetService("HttpService")
-
-while wait(10) do
-	local data  = httpService:GetAsync("https://www.reddit.com/r/memes/.json")
-	print(httpService:JSONDecode(data).data.children[1].data.title)
-end
+local HttpService = game:GetService("HttpService")
+print(HttpService:GetAsync("https://www.reddit.com/r/memes/"))
