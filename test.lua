@@ -26,6 +26,6 @@ print(c)
 
 local HttpService = game:GetService("HttpService")
 
-local a = HttpService:GetAsync("https://api.coindesk.com/v1/bpi/currentprice.json")
+local a = HttpService:GetAsync("https://raw.githubusercontent.com/Hezaus/Testing/main/requrie.lua")
 local b = HttpService:JSONDecode(a)
 print(b)
