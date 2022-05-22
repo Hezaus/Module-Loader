@@ -1,6 +1,3 @@
-local TextService = game:GetService("TextService")
---
-
 local b = {}
 
 function b:print(Text:string)
