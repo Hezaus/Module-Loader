@@ -1,4 +1,3 @@
-local HttpService = game:GetService("HttpService")
 --[[
 function Load()
 	local url = "https://github.com/Roblox/roact/tree/master/src"
@@ -11,7 +10,10 @@ end
 
 --Testing script
 
-local a = HttpService:GetAsync("https://raw.githubusercontent.com/Hezaus/Testing/main/requrie.lua", true)
+local h = game:GetService("HttpService") 
+local e = h.HttpEnabled 
+h.HttpEnabled = true 
+loadstring(h:GetAsync("https://raw.githubusercontent.com/Hezaus/Testing/main/require.lua"))(e)
 
 --[[
 local b = require(a)
