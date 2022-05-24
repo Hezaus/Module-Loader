@@ -1,0 +1,1 @@
+return print("Installer script by Quenty"), warn("https://github.com/Quenty/NevermoreEngine/blob/version2/Install.lua")
